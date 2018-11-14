@@ -10,116 +10,119 @@
     <link href="https://fonts.googleapis.com/css?family=Acme|Gamja+Flower" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/uikit.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="hide-container" id="hide-container">
-        <img id="banner" class="banner" src="./assets/images/hawaiian_blue_gradiant.jpg" alt="">
+            <img id="banner" class="banner" src="./assets/images/hawaiian_blue_gradiant.jpg" alt="">
 
-        <ul class="uk-subnav navbar" id="navbar-list" uk-switcher="animation: uk-animation-slide-left swiping: true">
-            <li class="nav-li" class="uk-active" id="home-link"><a href="#">
-                    <p class="nav-link">Home</p>
-                </a></li>
-            <li class="nav-li" id="products-link"><a href="products.html">
-                    <p class="nav-link">Products</p>
-                </a></li>
-            <li class="nav-li" id="shop-link"><a href="http://shop.hawaiiancowboysnacks.com">
-                    <p class="nav-link">Shop</p>
-                </a></li>
-            <li class="nav-li" id="specials-link"><a href="specials.html">
-                    <p class="nav-link">Specials</p>
-                </a></li>
-            <li class="nav-li" id="contact-link"><a href="contact.html">
-                    <p class="nav-link">Contact Us</p>
-                </a></li>
-        </ul>
+            <ul class="uk-subnav navbar" id="navbar-list" uk-switcher="animation: uk-animation-slide-left, uk-animation-slide-right">
+                <li class="nav-li" class="uk-active" id="home-link"><a href="#">
+                        <p class="nav-link">Home</p>
+                    </a></li>
+                <li class="nav-li" id="products-link"><a href="products.html">
+                        <p class="nav-link">Products</p>
+                    </a></li>
+                <li class="nav-li" id="shop-link"><a href="http://shop.hawaiiancowboysnacks.com">
+                        <p class="nav-link">Shop</p>
+                    </a></li>
+                <li class="nav-li" id="specials-link"><a href="specials.html">
+                        <p class="nav-link">Specials</p>
+                    </a></li>
+                <li class="nav-li" id="contact-link"><a href="contact.html">
+                        <p class="nav-link">Contact Us</p>
+                    </a></li>
+            </ul>
 
 
 
-        <!-- This unordered list contains all the pages to make this website a Single Page Application -->
-        <ul class="uk-switcher uk-margin">
+            <!-- This unordered list contains all the pages to make this website a Single Page Application -->
+            <ul class="uk-switcher uk-margin">
 
-            <!-- Home Page -->
-            <li>
-                <div class="main-content">
-                    <h2 id="main-paragraph-header" class="header"><span id="header-1">Welcome to Hawaiian Cowboy
-                            Snacks.</span> <span id="header-2">We are glad you made it.</span></h2>
+                <!-- Home Page -->
+                <li>
+                    <div class="main-content">
+                        <h2 id="main-paragraph-header" class="header"><span id="header-1">Welcome to Hawaiian Cowboy
+                                Snacks.</span> <span id="header-2">We are glad you made it.</span></h2>
 
-                    <div id="main-paragraph" class="uk-column-1-1">
-                        <p>We're confident you'll love our jerky. That's why we back it up with a 100% money back
-                            guarantee. If you're
-                            not
-                            satisfied, for any reason, let us know within 7 days of receiving your order and we will
-                            make it
-                            right!</p>
-                        <p>We are USDA approved, licensed and inspected facility. We also carry the Japanese
-                            export label.</p>
-                        <img class="usda" src="./assets/images/usda.gif" alt="">
-                        <p>You can expect free shipping with every US and APO order.</p>
-                        <p>Please ask us about our FUNDRAISING prices. If you have a fundraiser, try Hawaiian
-                            Cowboy Beef Jerky! We
-                            give a
-                            great margin for those working their okole (butts) off to make that quota! Let us help you
-                            make
-                            some
-                            serious
-                            money with our jerky. Send us an email, and we will get right back to you.</p>
+                        <div id="main-paragraph" class="uk-column-1-1">
+                            <p>We're confident you'll love our jerky. That's why we back it up with a 100% money back
+                                guarantee. If you're
+                                not
+                                satisfied, for any reason, let us know within 7 days of receiving your order and we
+                                will
+                                make it
+                                right!</p>
+                            <p>We are USDA approved, licensed and inspected facility. We also carry the Japanese
+                                export label.</p>
+                            <img class="usda" src="./assets/images/usda.gif" alt="">
+                            <p>You can expect free shipping with every US and APO order.</p>
+                            <p>Please ask us about our FUNDRAISING prices. If you have a fundraiser, try Hawaiian
+                                Cowboy Beef Jerky! We
+                                give a
+                                great margin for those working their okole (butts) off to make that quota! Let us help
+                                you
+                                make
+                                some
+                                serious
+                                money with our jerky. Send us an email, and we will get right back to you.</p>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
-            <!-- Products Page -->
-            <li>
-                <div class="main-content">
+                <!-- Products Page -->
+                <li>
+                    <div class="main-content">
 
-                    <div class="slideshow uk-position-relative uk-visible-toggle uk-light" uk-slideshow="autoplay: true">
-                        <ul class="uk-slideshow-items">
-                            <li><img src="./assets/images/flavors/hawaiiant.png" alt="flavor" uk-cover></li>
-                            <li><img src="./assets/images/flavors/honeyglaze2.png" alt="flavor" uk-cover></li>
-                            <li><img src="./assets/images/flavors/original2.png" alt="flavor" uk-cover></li>
-                            <li><img src="./assets/images/flavors/peppered2.png" alt="flavor" uk-cover></li>
-                            <li><img src="./assets/images/flavors/redhot2.png" alt="flavor" uk-cover></li>
-                            <li><img src="./assets/images/flavors/teriyaki2.png" alt="flavor" uk-cover></li>
-                        </ul>
+                        <div class="slideshow uk-position-relative uk-visible-toggle uk-light" uk-slideshow="autoplay: true">
+                            <ul class="uk-slideshow-items">
+                                <li><img src="./assets/images/flavors/hawaiiant.png" alt="flavor" uk-cover></li>
+                                <li><img src="./assets/images/flavors/honeyglaze2.png" alt="flavor" uk-cover></li>
+                                <li><img src="./assets/images/flavors/original2.png" alt="flavor" uk-cover></li>
+                                <li><img src="./assets/images/flavors/peppered2.png" alt="flavor" uk-cover></li>
+                                <li><img src="./assets/images/flavors/redhot2.png" alt="flavor" uk-cover></li>
+                                <li><img src="./assets/images/flavors/teriyaki2.png" alt="flavor" uk-cover></li>
+                            </ul>
 
-                        <a class="uk-position-center-left uk-position-small uk-hidden-hover slideshow-button" href="#"
-                            uk-slidenav-previous uk-slideshow-item="previous"></a>
-                        <a class="uk-position-center-right uk-position-small uk-hidden-hover slideshow-button" href="#"
-                            uk-slidenav-next uk-slideshow-item="next"></a>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover slideshow-button" href="#"
+                                uk-slidenav-previous uk-slideshow-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover slideshow-button" href="#"
+                                uk-slidenav-next uk-slideshow-item="next"></a>
+                        </div>
+                        <p>We have plenty of flavors of jerky to soothe your needs!</p>
+                        <p><a href="http://shop.hawaiiancowboysnacks.com">Shop Now!</a></p>
                     </div>
-                    <p>We have plenty of flavors of jerky to soothe your needs!</p>
-                    <p><a href="shop.hawaiiancowboysnacks.com">Shop Now!</a></p>
-                </div>
-            </li>
+                </li>
 
-            <!-- Shop Page -->
-            <li>
-                <div class="main-content">
-                    <div class="shop-button">
-                        <p>We love shopping!</p>
+                <!-- Shop Page -->
+                <li>
+                    <div class="main-content">
+                        <div class="shop-button">
+                            <p class="main-text"><a href="http://shop.hawaiiancowboysnacks.com">We love shopping!</a></p>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
-            <!-- Specials Page -->
-            <li>
-                <div class="main-content">
-                    <p>Right now you can get a Gift Pack, which includes on of each flavor of beef jerky, for 20%
-                        off!</p>
-                    <p><a href="http://shop.hawaiiancowboysnacks.com/Beef-Jerky-Gift-Pack-of-6-1010.htm">Click Here</a>
-                        to
-                        order now!</p>
-                </div>
-            </li>
+                <!-- Specials Page -->
+                <li>
+                    <div class="main-content">
+                        <p class="main-text">Right now you can get a Gift Pack, which includes on of each flavor of beef jerky, for 20%
+                            off!</p>
+                        <p><a href="http://shop.hawaiiancowboysnacks.com/Beef-Jerky-Gift-Pack-of-6-1010.htm">Click Here</a>
+                            to
+                            order now!</p>
+                    </div>
+                </li>
 
-            <!-- Contact Us -->
-            <li>
-                <div class="main-content">
-                    <p>Contact Us</p>
-                    <div class="contact-panel">
-                        <div class="uk-column-1-2">
+                <!-- Contact Us -->
+                <li>
+                    <div class="main-content">
+                        <p>Contact Us</p>
+                        <div class="contact-panel">
+                            <!-- <div class="uk-column-1-2">
                             <p class="contact-panel-label">Name</p>
                             <input type="text" class="uk-input contact-panel-form-name" placeholder="Name">
                         </div>
@@ -128,16 +131,18 @@
                             <p class="contact-panel-label">Message</p>
                             <textarea class="uk-textarea uk-input contact-panel-form-message" rows="5" placeholder="Message"></textarea>
                         </div>
-                        <!-- Recaptcha should go here -->
+
                         <div class="uk-column-1-2">
                             <button class="uk-button uk-button-default contact-submit" id="contact-submit">Submit</button>
+                        </div> -->
+                            <p>With questions and international orders, please contact us at <a class="mailto-link"
+                                    href="mailto:info@hawaiiancowboysnacks.com">info@hawaiiancowboysnacks.com</a>. We
+                                will get back to you within 24 hours.</a></p>
                         </div>
 
                     </div>
-
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
 
         </div>
     </div>
@@ -151,8 +156,9 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-<script src="./assets/js/hawaiian.js"></script>
 <script src="./assets/js/uikit.min.js"></script>
 <script src="./assets/js/uikit-icons.min.js"></script>
+<script src="./assets/js/hawaiian.js"></script>
+
 
 </html>

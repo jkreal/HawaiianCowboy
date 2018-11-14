@@ -65,6 +65,7 @@ h2 {
     padding-left: -10px;
 }
 
+/* Navbar */
 .navbar {
     border: 2px solid black;
     border-radius: 5px;
@@ -74,6 +75,7 @@ h2 {
     background-color: white;
 }
 
+/* Nav list item */
 .nav-li {
     margin: auto;
     margin-bottom: 10px;
@@ -91,6 +93,12 @@ h2 {
 
 .main-content {
     min-height: 100%;
+    min-height: 50vh;
+}
+
+/* Specials */
+.main-text {
+    padding-top: 10vh;
 }
 
 /* Contact Panel */
@@ -225,3 +233,6 @@ h2 {
     animation-delay: 4s;
     animation-duration: 4s;
 }
+
+
+
