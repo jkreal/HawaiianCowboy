@@ -1,93 +1,227 @@
-.logo{
-	width: 100%;
-	height: 200px;
 
-	background-color: lightskyblue;
-
-	border-bottom: solid 4px teal;
-	border-bottom-right-radius: 25px;
-	border-bottom-left-radius: 25px;
+body {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
-body{
-	margin: 0px;
+.container {
+    /* min-height: 33em; */
 }
 
-.logoimg{
-	display: block;
-
-	margin-left: auto;
-	margin-right: auto;
-
-	width: 30%;
+.hide-container {
+    display: none;
 }
 
-.rusty{
-	width: 90%;
-	height: 90%;
-	margin-top: 20px;
-	margin-left: 17px;
+nav {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
 }
 
-.middle{
-	width: 100%;
-	height: 600px;
-
+body {
+    background-color: skyblue;
+    background-image: linear-gradient(skyblue, white);
 }
 
-
-.sidebarright{
-	width: 18%;
-	height: 450px;
-	background-color: whitesmoke;
-
-	float: left;
-
-	margin-left: 20px;
-	margin-top: 66px;
-
-	border-radius: 25px;
-	border: groove 2px black;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/* Paragraph */
+p {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Acme', sans-serif;
+    color: black;
 }
 
-.sidebarlefttop{
-	width: 18%;
-	height: 250px;
-	background-color: whitesmoke;
+h2 {
+    text-align: center;
+    font-family: 'Acme', sans-serif; 
 
-	float: left;
-	margin-top: 66px;
-	margin-left: 255px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 
-	border-radius: 25px;
-	border: groove 2px black;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 2px solid lightblue;
 }
 
-.middlebackground{
-	width: 35%;
-	height: 500px;
-	background-color: whitesmoke;
+/* Top Image */
+.banner {
+    border: 2px solid black;
+    border-radius: 10px;
 
-	float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
 
-	margin-left: 20px;
-	margin-top: 50px;
-
-	border-radius: 25px;
-	border: groove 2px black;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: none;
 }
-.footer{
-	width: 80%;
-	height: 100px;
-	
-	background-color: sandybrown;
 
-	margin-left: auto;
-	margin-right: auto;
-	
-	border: groove 2px black;
-	border-radius: 30px;
+/* Navbar Link */
+.nav-link {
+    font-family: 'Gamja Flower', cursive;
+    margin-top: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: -10px;
+}
+
+.navbar {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 50%;
+    padding-top: 10px;
+    margin: auto;
+    background-color: white;
+}
+
+.nav-li {
+    margin: auto;
+    margin-bottom: 10px;
+    padding-left: 0px;
+}
+
+/*Column */
+.uk-column-1-1 {
+    margin-left: 25%;
+    margin-right: 25%;
+
+    min-height: 100%;
+    clear: both;
+}
+
+.main-content {
+    min-height: 100%;
+}
+
+/* Contact Panel */
+.contact-panel {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contact-panel-label {
+    margin-left: -66%;
+}
+
+.contact-panel-form-name {
+    margin-left: -66%;
+}
+
+.contact-panel-form-message {
+    margin-left: -66%;
+    height: 15em;
+}
+
+.contact-submit {
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+/* Footer div */
+.footer {
+    color: black;
+    background-color: skyblue;
+
+    height: 10vh;
+    width: 100%;
+
+    text-align: center;
+
+    border: 2px solid black;
+
+    position: flex;
+    flex-shrink: 0;
+    margin-top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Footer text */
+.footer h3 {
+    font-family: 'Gamja Flower', cursive;
+    line-height: 10vh;
+}
+
+/* USDA label */
+.usda {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 12%;
+    text-align: center;
+}
+
+/* Specials Page - Slideshow */
+.slideshow {
+    width: 33%;
+    margin: auto;
+}
+
+/* Used for animations */
+/* Note: Animations will only be shown the first time you visit the page that day */
+
+/* Picture Animations */
+#banner {
+    animation-delay: 3.8s;
+}
+
+/* Header Animations */
+#header-1 {
+    animation-delay: 0.6s;
+    animation-duration: 2.25s;
+}
+
+#header-2 {
+    animation-delay: 3.2s;
+    animation-duration: 2.25s;
+}
+
+/* Navbar Animations */
+#navbar-list {
+    animation-delay: 4.5s;
+    animation-duration: 2.25s;
+}
+
+#home-link {
+    animation-delay: 4.7s;
+    animation-duration: 1.5s;
+}
+
+#products-link {
+    animation-delay: 4.9s;
+    animation-duration: 1.5s;
+}
+
+#shop-link {
+    animation-delay: 5.1s;
+    animation-duration: 1.5s;
+}
+
+#specials-link {
+    animation-delay: 5.3s;
+    animation-duration: 1.5s;
+}
+
+#contact-link {
+    animation-delay: 5.5s;
+    animation-duration: 1.5s;
+}
+
+/* Main Paragraph Animation */
+#main-paragraph {
+    animation-delay: 4s;
+    animation-duration: 5s;
+}
+
+#footer {
+    animation-delay: 4s;
+    animation-duration: 4s;
 }
