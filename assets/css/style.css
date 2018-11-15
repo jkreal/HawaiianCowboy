@@ -1,7 +1,10 @@
-
+html {
+    height: 100%;
+}
 /* Hides the content before animations start */
 .hide-container {
     display: none;
+    /* height: 100%; */
 }
 
 /* Navbar borders */
@@ -18,11 +21,13 @@ body {
     right: 0;
     bottom: 0;
 
+    position: relative;
+
     /* Set background gradient, no touch action, min height is the whole view */
     background-color: skyblue;
     background-image: linear-gradient(skyblue, white);
-    touch-action: none;
     min-height: 100vh;
+    
 }
 
 /* Paragraph */
@@ -93,8 +98,8 @@ h2 {
 }
 
 .main-content {
-    min-height: 100%;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Specials */
@@ -114,7 +119,9 @@ h2 {
     padding-bottom: 40px;
 }
 
-/* .contact-panel-label {
+/* Was going to use this for a contact message system, can't do it client side!
+
+.contact-panel-label {
     margin-left: -66%;
 }
 
@@ -125,12 +132,12 @@ h2 {
 .contact-panel-form-message {
     margin-left: -66%;
     height: 15em;
-} */
+}
 
 .contact-submit {
     margin-top: 20px;
     margin-left: 50%;
-}
+} */
 
 /* Footer div */
 .footer {
@@ -149,6 +156,8 @@ h2 {
 
     margin: auto auto 0 auto;
     margin-bottom: 0;
+    clear: both;
+    position: relative;
 }
 
 /* Footer text */

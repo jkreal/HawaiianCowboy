@@ -93,6 +93,7 @@ $(document).on("swipeleft", function( event ) {
 //Triggers when you swipe right on mobile
 $(document).on("swiperight", function( event ) {
     //Set the animation to swipe right style
+    console.log('swiperight');
     $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-left, uk-animation-slide-right");
 });
 
