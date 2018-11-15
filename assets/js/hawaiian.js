@@ -1,7 +1,18 @@
 
 //Variable used to determine which link was clicked for animation purposes
 var prevLink;
-$('.uk-switcher').off('swiping');
+
+//Variable to easily set the animations that will be played, view Animate.css documentation
+var animations = {
+    navBar: "fadeIn",
+    navItem: "bounceInUp",
+    mainParagraph: "fadeIn",
+    mainParagraphHeader: "flipInX",
+    banner: "fadeIn",
+    footer: "fadeIn",
+
+    navItemClick: "bounce"
+}
 
 //Runs when the document is loaded
 $(document).ready(function () {
@@ -17,7 +28,7 @@ $(document).ready(function () {
         localStorage.setItem("lastVisited", "000");
     }
 
-    //If the page was last visited earlier today, skip the site intro animations
+    // // If the page was last visited earlier today, skip the site intro animations
     if (localStorage.getItem("lastVisited") === (date.getDate().toString() + date.getMonth().toString() + date.getFullYear().toString())) {
         siteVisited();
 
@@ -26,6 +37,8 @@ $(document).ready(function () {
         siteIntro();
     }
 
+    // siteIntro();
+
     //Set lastVisited in localStorage to the current date, after the site has been animated/not animated
     localStorage.setItem("lastVisited", date.getDate().toString() + date.getMonth().toString() + date.getFullYear().toString());
 
@@ -33,22 +46,37 @@ $(document).ready(function () {
 
 // When a nav link is clicked this will run
 $(document).on("click", ".nav-li", function () {
-    navClick('#' + $(this).attr('id'));
+    navClick('#' + $(this).attr('id'), false);
 });
 
-function navClick(ele) {
-    $(ele).addClass("animated bounce");
+function navClick(ele, swipe) {
+    $(ele).addClass("animated " + animations.navItemClick);
     //Change bottom border to appear when clicked
     $(ele).css("border-bottom", "2px solid black");
+    
+    //If there is no swipe, change the animations based on index
+    if(swipe === false) {
+        if($(ele).index() < $(prevLink).index()) {
+            //Swipe left
+            $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-left, uk-animation-slide-right");
+        } else {
+            //Swipe right
+            $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-right, uk-animation-slide-left");
+        }
+    }
 
-    //Make previous link not have border bottom or animation class
     if (prevLink) {
-        $(prevLink).removeClass("animated bounce");
+        //Make previous link not have border bottom or animation class
+        $(prevLink).removeClass("animated " + animations.navItemClick);
         $(prevLink).css("border-bottom", "");
     }
 
-    //The global variable prevLink is now $(ele)
-    prevLink = $(ele);
+    //The global variable prevLink is now $(ele), set in a timeout because it
+    //sets it before the animation is played. Fucking loser
+    setTimeout(() => {
+        prevLink = $(ele);
+    }, 350);
+    
 
     //If the shop link is clicked, open the shop
     // if ($(ele).attr("id") === 'shop-link') {
@@ -56,12 +84,23 @@ function navClick(ele) {
     // }
 }
 
-$(window).on("swipe", function( event ) {
+//Triggers when you swipe left on mobile
+$(document).on("swipeleft", function( event ) {
+    //Set the animation to swipe left style
+    $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-right, uk-animation-slide-left");
+});
+
+//Triggers when you swipe right on mobile
+$(document).on("swiperight", function( event ) {
+    //Set the animation to swipe right style
+    $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-left, uk-animation-slide-right");
+});
+
+//Triggers before the main content is hidden
+$(document).on("beforehide.uk.switcher", function () {
     setTimeout(() => {
-        console.log($('li.uk-active').attr('id'));
-        navClick('#' + $('li.uk-active').attr('id'));
-    }, 50);
-    
+        navClick("#" + $('li.uk-active').attr('id'));
+    }, 200);
 });
 
 //Function to run if the site has already been visited today (No animations)
@@ -91,35 +130,35 @@ function siteIntro() {
     });
 
     //Navbar Animation
-    $('#navbar-list').addClass('animated fadeIn delay-4.5');
+    $('#navbar-list').addClass('animated ' + animations.navBar);
 
     //Each link in navbar animation
     $('#navbar-list').children().each(function (index, element) {
-        $(element).addClass('animated bounceIn');
+        $(element).addClass('animated ' + animations.navItem);
     });
 
     //Animate the paragraph header
     $('#main-paragraph-header').children().each(function (index, element) {
-        $(element).addClass('animated fadeInRightBig');
+        $(element).addClass('animated ' + animations.mainParagraphHeader);
     });
 
     //Main paragraph, banner, and footer animations
-    $('#main-paragraph').addClass('animated fadeIn');
-    $('#banner').addClass('animated fadeIn');
-    $('#footer').addClass('animated fadeIn');
+    $('#main-paragraph').addClass('animated ' + animations.mainParagraph);
+    $('#banner').addClass('animated ' + animations.banner);
+    $('#footer').addClass('animated ' + animations.footer);
 
     //Remove all the classes used for animation after 7 seconds (After intro)
     setTimeout(() => {
-        $('#navbar-list').removeClass('animated fadeIn');
+        $('#navbar-list').removeClass('animated ' + animations.navBar);
         $('#navbar-list').children().each(function (index, element) {
-            $(element).removeClass('animated bounceIn');
+            $(element).removeClass('animated ' + animations.navItem);
             $(element).css('animation-delay', '0s');
         });
         $('#main-paragraph-header').children().each(function (index, element) {
-            $(element).removeClass('animated fadeInRightBig');
+            $(element).removeClass('animated ' + animations.mainParagraphHeader);
         });
-        $('#main-paragraph').removeClass('animated fadeIn');
-        $('#banner').removeClass('animated fadeIn');
+        $('#main-paragraph').removeClass('animated ' + animations.mainParagraph);
+        $('#banner').removeClass('animated ' + animations.banner);
     }, 7000);
 
 }

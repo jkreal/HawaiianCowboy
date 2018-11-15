@@ -1,0 +1,61 @@
+/* Used for animations */
+/* Note: Animations will only be shown the first time you visit the page that day */
+
+/* Picture Animations */
+#banner {
+    animation-delay: 3.8s;
+}
+
+/* Header Animations */
+#header-1 {
+    animation-delay: 0.6s;
+    animation-duration: 2.25s;
+}
+
+#header-2 {
+    animation-delay: 3.2s;
+    animation-duration: 2.25s;
+}
+
+/* Navbar Animations */
+#navbar-list {
+    animation-delay: 4.5s;
+    animation-duration: 2.25s;
+}
+
+#home-link {
+    animation-delay: 4.7s;
+    animation-duration: 1.5s;
+}
+
+#products-link {
+    animation-delay: 4.9s;
+    animation-duration: 1.5s;
+}
+
+#shop-link {
+    animation-delay: 5.1s;
+    animation-duration: 1.5s;
+}
+
+#specials-link {
+    animation-delay: 5.3s;
+    animation-duration: 1.5s;
+}
+
+#contact-link {
+    animation-delay: 5.5s;
+    animation-duration: 1.5s;
+}
+
+/* Main Paragraph Animation */
+#main-paragraph {
+    animation-delay: 4s;
+    animation-duration: 5s;
+}
+
+#footer {
+    animation-delay: 4s;
+    animation-duration: 4s;
+}
+

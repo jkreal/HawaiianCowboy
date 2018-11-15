@@ -1,33 +1,34 @@
 
-body {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.container {
-    /* min-height: 33em; */
-}
-
+/* Hides the content before animations start */
 .hide-container {
     display: none;
 }
 
+/* Navbar borders */
 nav {
     border-bottom: 2px solid black;
     border-top: 2px solid black;
 }
 
+
 body {
+    /* Set body to fit the whole screen */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Set background gradient, no touch action, min height is the whole view */
     background-color: skyblue;
     background-image: linear-gradient(skyblue, white);
+    touch-action: none;
+    min-height: 100vh;
 }
 
 /* Paragraph */
 p {
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     font-family: 'Acme', sans-serif;
     color: black;
 }
@@ -93,7 +94,7 @@ h2 {
 
 .main-content {
     min-height: 100%;
-    min-height: 50vh;
+    flex: 1;
 }
 
 /* Specials */
@@ -113,7 +114,7 @@ h2 {
     padding-bottom: 40px;
 }
 
-.contact-panel-label {
+/* .contact-panel-label {
     margin-left: -66%;
 }
 
@@ -124,7 +125,7 @@ h2 {
 .contact-panel-form-message {
     margin-left: -66%;
     height: 15em;
-}
+} */
 
 .contact-submit {
     margin-top: 20px;
@@ -137,7 +138,7 @@ h2 {
     background-color: skyblue;
 
     height: 10vh;
-    width: 100%;
+    width: 99%;
 
     text-align: center;
 
@@ -145,9 +146,9 @@ h2 {
 
     position: flex;
     flex-shrink: 0;
-    margin-top: 0;
-    bottom: 0;
-    left: 0;
+
+    margin: auto auto 0 auto;
+    margin-bottom: 0;
 }
 
 /* Footer text */
@@ -172,67 +173,3 @@ h2 {
     width: 33%;
     margin: auto;
 }
-
-/* Used for animations */
-/* Note: Animations will only be shown the first time you visit the page that day */
-
-/* Picture Animations */
-#banner {
-    animation-delay: 3.8s;
-}
-
-/* Header Animations */
-#header-1 {
-    animation-delay: 0.6s;
-    animation-duration: 2.25s;
-}
-
-#header-2 {
-    animation-delay: 3.2s;
-    animation-duration: 2.25s;
-}
-
-/* Navbar Animations */
-#navbar-list {
-    animation-delay: 4.5s;
-    animation-duration: 2.25s;
-}
-
-#home-link {
-    animation-delay: 4.7s;
-    animation-duration: 1.5s;
-}
-
-#products-link {
-    animation-delay: 4.9s;
-    animation-duration: 1.5s;
-}
-
-#shop-link {
-    animation-delay: 5.1s;
-    animation-duration: 1.5s;
-}
-
-#specials-link {
-    animation-delay: 5.3s;
-    animation-duration: 1.5s;
-}
-
-#contact-link {
-    animation-delay: 5.5s;
-    animation-duration: 1.5s;
-}
-
-/* Main Paragraph Animation */
-#main-paragraph {
-    animation-delay: 4s;
-    animation-duration: 5s;
-}
-
-#footer {
-    animation-delay: 4s;
-    animation-duration: 4s;
-}
-
-
-

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/animation-settings.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <div class="hide-container" id="hide-container">
             <img id="banner" class="banner" src="./assets/images/hawaiian_blue_gradiant.jpg" alt="">
 
-            <ul class="uk-subnav navbar" id="navbar-list" uk-switcher="animation: uk-animation-slide-left, uk-animation-slide-right">
+            <ul class="uk-subnav navbar" id="navbar-list" uk-switcher="swiping: true">
                 <li class="nav-li" class="uk-active" id="home-link"><a href="#">
                         <p class="nav-link">Home</p>
                     </a></li>
@@ -109,7 +110,8 @@
                 <!-- Specials Page -->
                 <li>
                     <div class="main-content">
-                        <p class="main-text">Right now you can get a Gift Pack, which includes on of each flavor of beef jerky, for 20%
+                        <p class="main-text">Right now you can get a Gift Pack, which includes on of each flavor of
+                            beef jerky, for 20%
                             off!</p>
                         <p><a href="http://shop.hawaiiancowboysnacks.com/Beef-Jerky-Gift-Pack-of-6-1010.htm">Click Here</a>
                             to
@@ -154,8 +156,10 @@
 </body>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+<script src="./assets/js/jquery-3.3.1.min.js"></script>
+<script src="./assets/js/jquery-migrate.min.js"></script>
+<script src="./assets/js/jquery-ui.min.js"></script>
+<script src="./assets/js/jquery.mobile-events.min.js"></script>
 <script src="./assets/js/uikit.min.js"></script>
 <script src="./assets/js/uikit-icons.min.js"></script>
 <script src="./assets/js/hawaiian.js"></script>
