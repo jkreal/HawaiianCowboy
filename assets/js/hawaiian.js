@@ -31,7 +31,7 @@ $(document).ready(function () {
     // // If the page was last visited earlier today, skip the site intro animations
     if (localStorage.getItem("lastVisited") === (date.getDate().toString() + date.getMonth().toString() + date.getFullYear().toString())) {
         siteVisited();
-
+        navClick('#' + 'home-link', true);
     } else {
         //Otherwise, play the intro animations
         siteIntro();
@@ -79,21 +79,22 @@ function navClick(ele, swipe) {
     
 
     //If the shop link is clicked, open the shop
-    // if ($(ele).attr("id") === 'shop-link') {
-    //     window.open("http://shop.hawaiiancowboysnacks.com", "Shop");
-    // }
+    if ($(ele).attr("id") === 'shop-link' && swipe === false) {
+        window.open("http://shop.hawaiiancowboysnacks.com", "Shop");
+    }
 }
 
 //Triggers when you swipe left on mobile
 $(document).on("swipeleft", function( event ) {
     //Set the animation to swipe left style
+    event.preventDefault();
     $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-right, uk-animation-slide-left");
 });
 
 //Triggers when you swipe right on mobile
 $(document).on("swiperight", function( event ) {
     //Set the animation to swipe right style
-    console.log('swiperight');
+    event.preventDefault();
     $(".uk-subnav").attr('uk-switcher', "swiping: true; animation: uk-animation-slide-left, uk-animation-slide-right");
 });
 
